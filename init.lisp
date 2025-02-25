@@ -1,7 +1,6 @@
 ;;; An idiot admires complexity, a genius admires simplicity.
 ;;;                                                    ― Terry Davis
 
-
 (use-package :split-sequence)
 (in-package :lem-user)
 
