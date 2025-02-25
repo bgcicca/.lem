@@ -16,15 +16,17 @@
 (lem/line-numbers:toggle-line-numbers)
 (setf lem/line-numbers:*relative-line* t)
 
-(add-hook *prompt-after-activate-hook*         
-          (lambda ()           
-            (call-command 'lem/prompt-window::prompt-completion nil)))(add-hook *prompt-deactivate-hook*   
-                                                                                (lambda ()           
-                                                                                  (setf lem-core::*default-prompt-gravity* :bottom-display)
-                                                                                  (setf lem/prompt-window::*prompt-completion-window-gravity* :horizontally-above-window)
-                                                                                  (setf lem/prompt-window::*fill-width* t)
-                                                                                  (lem/completion-mode:completion-end)))
+(setf lem-core::*default-prompt-gravity* :bottom-display
+      lem/prompt-window::*prompt-completion-window-gravity* :horizontally-above-window
+      lem/prompt-window::*fill-width* t)
 
+(add-hook *prompt-after-activate-hook*
+          (lambda () 
+            (call-command 'lem/prompt-window::prompt-completion nil)))
+
+(add-hook *prompt-deactivate-hook*
+          (lambda () 
+            (lem/completion-mode:completion-end)))
 (define-key lem-vi-mode:*insert-keymap* "C-n" 'lem/abbrev:abbrev-with-pop-up-window)
 
 (setf lem:*auto-format* t)
@@ -54,6 +56,15 @@
   (lem/listener-mode:listener-return))
 
 ;; Keymaps
+(define-keys *global-keymap*
+  ("C-c s" 'split-active-window-horizontally)
+  ("C-c v" 'split-active-window-vertically)
+  ("C-c o" 'next-window)
+  ("C-c p" 'previous-window)
+  ("C-c d" 'delete-window)
+  ("C-c t" 'terminal)
+  ("C-c l" 'lem-lisp-mode:lisp-mode)
+  ("C-c x" 'delete-active-window))
 
 (define-keys *global-keymap*
   ("C-h b" 'describe-bindings)
