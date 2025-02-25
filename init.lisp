@@ -7,6 +7,9 @@
           (lambda ()           
             (call-command 'lem/prompt-window::prompt-completion nil)))(add-hook *prompt-deactivate-hook*   
                                                                                 (lambda ()           
+                                                                                  (setf lem-core::*default-prompt-gravity* :bottom-display)
+                                                                                  (setf lem/prompt-window::*prompt-completion-window-gravity* :horizontally-above-window)
+                                                                                  (setf lem/prompt-window::*fill-width* t)
                                                                                   (lem/completion-mode:completion-end)))
 
 (lem-vi-mode:vi-mode)
@@ -29,3 +32,5 @@
 (define-key lem-vi-mode:*normal-keymap* "C-j" 'window-move-down)
 (define-key lem-vi-mode:*normal-keymap* "C-k" 'window-move-up)
 (define-key lem-vi-mode:*normal-keymap* "C-l" 'window-move-right)
+(define-key lem-vi-mode:*normal-keymap* "Space x x" 'delete-active-window)
+(define-key lem-vi-mode:*normal-keymap* "Space x o" 'delete-other-windows)
