@@ -14,4 +14,5 @@
 (define-key lem-vi-mode:*insert-keymap* "C-n" 'lem/abbrev:abbrev-with-pop-up-window)
 (lem/line-numbers:toggle-line-numbers)
 (setf lem/line-numbers:*relative-line* t)
-(setf lem: *auto-format* t)
+(setf lem:*auto-format* t)
+

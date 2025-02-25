@@ -1,2 +1,2 @@
 
-(:COLOR-THEME "emacs-dark" :ISEARCH-PREVIOUS-STRING "x")
+(:COLOR-THEME "emacs-dark" :ISEARCH-PREVIOUS-STRING "")
