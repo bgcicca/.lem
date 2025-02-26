@@ -106,6 +106,7 @@
   (move-to-end-of-buffer)
   (lem/listener-mode:listener-return))
 
+
 ;; Keymaps
 (define-keys *global-keymap*
   ("C-c s" 'split-active-window-horizontally)
@@ -117,7 +118,7 @@
   ("C-c x" 'delete-active-window)
   ("C-c r" 'copy-region)
   ("C-e" 'exit-lem)
-  ("C-r" 'start-lisp-repl)
+  ("C-r r" 'lem-lisp-mode:start-lisp-repl)
   ("C-t" 'lem-terminal/terminal-mode::terminal)
   ("C-v" 'yank)
   ("C-s" 'save-current-buffer)
@@ -153,3 +154,9 @@
   :install-command "git clone https://github.com/georgewfraser/java-language-server && cd java-language-server && ./gradlew build"
   :readme-url "https://github.com/georgewfraser/java-language-server"
   :connection-mode :stdio)
+
+;; Auto-save mode
+(setf (lem:variable-value 'lem/auto-save::auto-save-checkpoint-frequency :global) 1.5)
+(setf (lem:variable-value 'lem/auto-save::auto-save-key-count-threshold :global) 0)
+
+(lem/auto-save::auto-save-mode t) 
