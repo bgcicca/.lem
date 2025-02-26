@@ -115,6 +115,7 @@
   ("C-c d" 'delete-window)
   ("C-c l" 'lem-lisp-mode:lisp-mode)
   ("C-c x" 'delete-active-window)
+  ("C-c t" 'copy-region)
   ("C-e" 'exit-lem)
   ("C-r" 'lem-lisp-mode/internal:slime)
   ("C-t" 'lem-terminal/terminal-mode::terminal)

@@ -8,17 +8,21 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
 
 * Config Keybinds
 
-#+BEGIN_SRC common lisp 
+#+BEGIN_SRC lisp 
 
+;; Keymaps
 (define-keys *global-keymap*
   ("C-c s" 'split-active-window-horizontally)
   ("C-c v" 'split-active-window-vertically)
   ("C-c o" 'next-window)
   ("C-c p" 'previous-window)
   ("C-c d" 'delete-window)
-  ("C-c t" 'terminal)
   ("C-c l" 'lem-lisp-mode:lisp-mode)
   ("C-c x" 'delete-active-window)
+  ("C-c t" 'copy-region)
+  ("C-e" 'exit-lem)
+  ("C-r" 'lem-lisp-mode/internal:slime)
+  ("C-t" 'lem-terminal/terminal-mode::terminal)
   ("C-v" 'yank)
   ("C-s" 'save-current-buffer)
   ("C-z" 'undo)
@@ -35,6 +39,7 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
 
 (define-key *global-keymap* "M-r" 'revert-buffer)
 
+
 #+END_SRC
 
 These are the current keybinds I'm using
@@ -43,3 +48,5 @@ These are the current keybinds I'm using
 
 - [[https://github.com/lem-project/lem][lem-project]]
 - [[https://github.com/fukamachi/.lem][fukamachi/.lem]]
+- [[https://github.com/solanav/lem-conf][solanav/lem-conf]]
+- [[https://github.com/Gavinok/.lem][Gavinok/.lem]]
