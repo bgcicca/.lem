@@ -66,6 +66,7 @@
 
 (lem/line-numbers:toggle-line-numbers)
 (setf lem/line-numbers:*relative-line* t)
+(lem:enable-clipboard-p)
 
 (setf lem-core::*default-prompt-gravity* :bottom-display
       lem/prompt-window::*prompt-completion-window-gravity* :horizontally-above-window
@@ -116,7 +117,7 @@
   ("C-c d" 'delete-window)
   ("C-c l" 'lem-lisp-mode:lisp-mode)
   ("C-c x" 'delete-active-window)
-  ("C-c r" 'copy-region)
+  ("C-c r" 'lem-core/commands/edit:copy-region-to-clipboard)
   ("C-e" 'exit-lem)
   ("C-r r" 'lem-lisp-mode:start-lisp-repl)
   ("C-t" 'lem-terminal/terminal-mode::terminal)
@@ -154,9 +155,3 @@
   :install-command "git clone https://github.com/georgewfraser/java-language-server && cd java-language-server && ./gradlew build"
   :readme-url "https://github.com/georgewfraser/java-language-server"
   :connection-mode :stdio)
-
-;; Auto-save mode
-(setf (lem:variable-value 'lem/auto-save::auto-save-checkpoint-frequency :global) 1.5)
-(setf (lem:variable-value 'lem/auto-save::auto-save-key-count-threshold :global) 0)
-
-(lem/auto-save::auto-save-mode t) 
