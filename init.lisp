@@ -117,7 +117,7 @@
   ("C-c x" 'delete-active-window)
   ("C-c r" 'copy-region)
   ("C-e" 'exit-lem)
-  ("C-r" 'lem-lisp-mode/internal:slime)
+  ("C-r" 'start-lisp-repl)
   ("C-t" 'lem-terminal/terminal-mode::terminal)
   ("C-v" 'yank)
   ("C-s" 'save-current-buffer)
