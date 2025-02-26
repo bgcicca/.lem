@@ -1,2 +1,2 @@
 
-(:COLOR-THEME "emacs-dark" :ISEARCH-PREVIOUS-STRING "")
+(:COLOR-THEME "gruvbox-material" :ISEARCH-PREVIOUS-STRING "")

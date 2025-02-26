@@ -9,7 +9,25 @@
 (use-package :split-sequence)
 (in-package :lem-user)
 
-(load-theme "emacs-dark") 
+(define-color-theme "gruvbox-material" ()
+  (:display-background-mode :dark)
+  (:foreground "#a89984")
+  (:background "#292828")
+  (:inactive-window-background nil)
+  (region :foreground nil :background "#005f00")
+  (modeline :bold t :foreground "#8a8a8a" :background "#121212")
+  (modeline-inactive :bold t :foreground "#6c6c6c" :background "#121212")
+  (syntax-warning-attribute :foreground "#ffff00")
+  (syntax-string-attribute :foreground "#00d75f")
+  (syntax-comment-attribute :foreground "#928374")
+  (syntax-keyword-attribute :foreground "#ea6962")
+  (syntax-constant-attribute :foreground "#00d75f")
+  (syntax-function-name-attribute :foreground "#89b482")
+  (syntax-variable-attribute :foreground "#87ff00")
+  (syntax-type-attribute :foreground "#7daea3")
+  (syntax-builtin-attribute :bold t :foreground "#a9b665"))
+
+(load-theme "gruvbox-material") 
 
 ;; (lem-vi-mode:vi-mode)
 
@@ -64,7 +82,12 @@
   ("C-c d" 'delete-window)
   ("C-c t" 'terminal)
   ("C-c l" 'lem-lisp-mode:lisp-mode)
-  ("C-c x" 'delete-active-window))
+  ("C-c x" 'delete-active-window)
+  ("C-v" 'yank)
+  ("C-s" 'save-current-buffer)
+  ("C-z" 'undo)
+  ("C-r o" 'toggle-read-only)
+  ("C-r b" 'rename-buffer))
 
 (define-keys *global-keymap*
   ("C-h b" 'describe-bindings)
@@ -73,3 +96,5 @@
   ("C-h c" 'apropos-command)
   ("C-h p" 'lem-lisp-mode:lisp-apropos-package)
   ("C-h f" 'lem-lisp-mode:lisp-describe-symbol))
+
+(define-key *global-keymap* "M-r" 'revert-buffer)
