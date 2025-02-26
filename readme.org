@@ -41,5 +41,5 @@ These are the current keybinds I'm using
 
 * See aslo
 
-* [[https://github.com/lem-project/lem][lem-project]]
-* [[https://github.com/fukamachi/.lem][fukamachi/.lem]]
+- [[https://github.com/lem-project/lem][lem-project]]
+- [[https://github.com/fukamachi/.lem][fukamachi/.lem]]
