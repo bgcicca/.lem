@@ -144,3 +144,12 @@
       (lem-lisp-mode::eval-with-transcript
        `(ql:quickload ,(string-downcase package))))))
 (define-key *global-keymap* "C-c C-q" 'lisp-quickload-file)
+
+;; Java Mode
+(lem-lsp-mode:define-language-spec (java-spec lem-java-mode:java-mode)
+  :language-id "java"
+  :root-uri-patterns '("pom.xml" "build.gradle" ".git")
+  :command '("java-language-server")
+  :install-command "git clone https://github.com/georgewfraser/java-language-server && cd java-language-server && ./gradlew build"
+  :readme-url "https://github.com/georgewfraser/java-language-server"
+  :connection-mode :stdio)
