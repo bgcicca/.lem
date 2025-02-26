@@ -116,6 +116,7 @@
   ("C-c l" 'lem-lisp-mode:lisp-mode)
   ("C-c x" 'delete-active-window)
   ("C-e" 'exit-lem)
+  ("C-r" 'lem-lisp-mode/internal:slime)
   ("C-t" 'lem-terminal/terminal-mode::terminal)
   ("C-v" 'yank)
   ("C-s" 'save-current-buffer)
