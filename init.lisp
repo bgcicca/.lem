@@ -27,6 +27,21 @@
   (syntax-type-attribute :foreground "#7daea3")
   (syntax-builtin-attribute :bold t :foreground "#a9b665"))
 
+(define-attribute lem-lisp-mode/paren-coloring:paren-color-1
+  (t :foreground "#b87be9"))
+(define-attribute lem-lisp-mode/paren-coloring:paren-color-2
+  (t :foreground "#ff7ca5"))
+(define-attribute lem-lisp-mode/paren-coloring:paren-color-3
+  (t :foreground "#faa37b"))
+(define-attribute lem-lisp-mode/paren-coloring:paren-color-4
+  (t :foreground "#dbc379"))
+(define-attribute lem-lisp-mode/paren-coloring:paren-color-5
+  (t :foreground "#b3d88b"))
+(define-attribute lem-lisp-mode/paren-coloring:paren-color-6
+  (t :foreground "#7be9b8"))
+
+(lem-lisp-mode/paren-coloring:toggle-paren-coloring)
+
 (load-theme "gruvbox-material") 
 
 ;; (lem-vi-mode:vi-mode)
@@ -83,6 +98,7 @@
   ("C-c t" 'terminal)
   ("C-c l" 'lem-lisp-mode:lisp-mode)
   ("C-c x" 'delete-active-window)
+  ("C-e" 'exit-lem)
   ("C-v" 'yank)
   ("C-s" 'save-current-buffer)
   ("C-z" 'undo)
