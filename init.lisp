@@ -114,3 +114,12 @@
   ("C-h f" 'lem-lisp-mode:lisp-describe-symbol))
 
 (define-key *global-keymap* "M-r" 'revert-buffer)
+
+;; Lisp Mode
+(define-command lisp-quickload-file () ()
+  (lem-lisp-mode::check-connection)
+  (let ((package (lem-lisp-mode::buffer-package (current-buffer))))
+    (when package
+      (lem-lisp-mode::eval-with-transcript
+       `(ql:quickload ,(string-downcase package))))))
+(define-key *global-keymap* "C-c C-q" 'lisp-quickload-file)
