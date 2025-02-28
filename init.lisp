@@ -149,7 +149,6 @@
 (define-key *global-keymap* "C-c C-q" 'lisp-quickload-file)
 
 ;; Guile mode 
-
 (defvar *swank-port* 4015)
 
 #+(or sbcl ccl)
@@ -160,3 +159,17 @@
         "-c" ,(format nil "(import (guile-swank)) (start-swank ~a)"
                       *swank-port*))
       lem-scheme-mode:*use-scheme-repl-shortcut* t )
+
+;; C mode
+(lem-lsp-mode/lsp-mode::define-language-spec (c-spec lem-c-mode:c-mode)
+  :language-id "c"
+  :root-uri-patterns '("makefile" "Makefile")
+  :command '("clangd" "-background-index")
+  :connection-mode :stdio)
+
+;; Java mode
+(lem-lsp-mode/lsp-mode::define-language-spec (java-spec lem-java-mode:java-mode)
+  :language-id "java"
+  :root-uri-patterns '("pom.xml" "build.gradle" "build.xml" ".project")
+  :command '("jdtls")
+  :connection-mode :stdio)
