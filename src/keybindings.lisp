@@ -1,24 +1,7 @@
-* My Personal lem config
+(defpackage :config/keybindings 
+  (:use :cl :lem))
+(in-package :config/keybindings)
 
-[[https://lem-project.github.io/icon-blue.svg]]
-
-The text editor lem is the lisp hacker editor, super complete, extensible and easy to understand, together with emacs they are very powerful tools for those who work with lisp.
-
-[[./lem-dashboard.png]]
-
-* Language modes
-
-- Lisp mode
-- Guile mode 
-- Java mode
-- C mode 
-- Html mode 
-- Css mode 
-
-* Config Keybinds
-
-#+BEGIN_SRC lisp 
-;; Keymaps
 (define-keys *global-keymap*
   ("C-c s" 'lem-core/commands/window:split-active-window-horizontally)
   ("C-c v" 'lem-core/commands/window:split-active-window-vertically)
@@ -48,13 +31,3 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
   ("C-h f" 'lem-lisp-mode:lisp-describe-symbol))
 
 (define-key *global-keymap* "M-r" 'revert-buffer)
-#+END_SRC
-
-These are the current keybinds I'm using
-
-* See aslo
-
-- [[https://github.com/lem-project/lem][lem-project]]
-- [[https://github.com/fukamachi/.lem][fukamachi/.lem]]
-- [[https://github.com/solanav/lem-conf][solanav/lem-conf]]
-- [[https://github.com/Gavinok/.lem][Gavinok/.lem]]
