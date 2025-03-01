@@ -26,6 +26,7 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
 - C mode 
 - Html mode 
 - Css mode 
+- Js mode
 
 * Config Keymaps
 

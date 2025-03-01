@@ -11,4 +11,5 @@
                              (:file "c-mode")
                              (:file "css-mode")
                              (:file "html-mode")
+                             (:file "javascript-mode")
                              (:file "repl")))))

@@ -1,4 +1,6 @@
-;; Lisp Mode
+(defpackage :config/lisp-mode 
+  (:use :cl :lem))
+(in-package :config/lisp-mode)
 
 (define-attribute lem-lisp-mode/paren-coloring:paren-color-1
   (t :foreground "#b87be9"))
@@ -14,6 +16,7 @@
   (t :foreground "#7be9b8"))
 
 (lem-lisp-mode/paren-coloring:toggle-paren-coloring)
+
 (define-command lisp-quickload-file () ()
   (lem-lisp-mode::check-connection)
   (let ((package (lem-lisp-mode::buffer-package (current-buffer))))
