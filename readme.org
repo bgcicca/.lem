@@ -1,4 +1,4 @@
-* My Personal lem config
+* Oh My Lem
 
 [[https://lem-project.github.io/icon-blue.svg]]
 
@@ -15,41 +15,39 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
 - Html mode 
 - Css mode 
 
-* Config Keybinds
+* Config Keymaps
 
-#+BEGIN_SRC lisp 
-;; Keymaps
-(define-keys *global-keymap*
-  ("C-c s" 'lem-core/commands/window:split-active-window-horizontally)
-  ("C-c v" 'lem-core/commands/window:split-active-window-vertically)
-  ("C-c o" 'lem-core/commands/window:next-window)
-  ("C-c p" 'lem-core/commands/window:previous-window)
-  ("C-c l" 'lem-lisp-mode:lisp-mode)
-  ("C-d" 'lem-core/commands/window:delete-active-window)
-  ("C-c r" 'lem-core/commands/edit:copy-region-to-clipboard)
-  ("C-e" 'exit-lem)
-  ("C-r r" 'lem-lisp-mode:start-lisp-repl)
-  ("C-t" 'lem-terminal/terminal-mode::terminal)
-  ("C-v" 'yank)
-  ("C-s" 'save-current-buffer)
-  ("C-z" 'undo)
-  ("C-/" 'lem/language-mode::comment-or-uncomment-region) 
-  ("C-f" 'lem-core/commands/file:find-file)
-  ("C-r o" 'toggle-read-only)
-  ("C-r b" 'rename-buffer))
+**** Window
+- C-c s: split active window horizontally
+- C-c v: split active window vertically
+- C c o: change to next window
+- C-c p: change to previous window
+- C-d: delete active window
 
-(define-keys *global-keymap*
-  ("C-h b" 'describe-bindings)
-  ("C-h k" 'describe-key)
-  ("C-h a" 'lem-lisp-mode:lisp-apropos)
-  ("C-h c" 'apropos-command)
-  ("C-h p" 'lem-lisp-mode:lisp-apropos-package)
-  ("C-h f" 'lem-lisp-mode:lisp-describe-symbol))
+**** Lisp mode
+- C-c l: start lisp mode
+- C-r r: start lisp repl
+- C-h p: lisp apropos package
+- C-h f: lisp describe symbol
+- C-h a: lisp apropos
 
-(define-key *global-keymap* "M-r" 'revert-buffer)
-#+END_SRC
+**** Editor
+- C-e: exit lem
+- C-c r: copy region to clipboard
+- C-v: yank text from clipoard
+- C-s: save current buffer
+- C-z: undo
+- C-/: comment or uncomment region
+- C-f: find file
+- C-r o: toggle read only
+- C-r b: rename buffer
 
-These are the current keybinds I'm using
+**** Help
+- C-h b: describe bindings
+- C-h k: describe key
+- C-h c: apropos command
+
+These are the current keybinds of the distro
 
 * See aslo
 
