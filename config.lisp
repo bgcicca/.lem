@@ -1,2 +1,2 @@
 
-(:COLOR-THEME "svelte-high-contrast" :ISEARCH-PREVIOUS-STRING "")
+(:COLOR-THEME "gruvbox-material" :ISEARCH-PREVIOUS-STRING "")
