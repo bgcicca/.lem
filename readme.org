@@ -1,3 +1,4 @@
+#+OPTIONS: toc:t
 * Oh My Lem
 
 [[https://lem-project.github.io/icon-blue.svg]]
@@ -5,6 +6,17 @@
 The text editor lem is the lisp hacker editor, super complete, extensible and easy to understand, together with emacs they are very powerful tools for those who work with lisp and many other languages. Knowing that there are people who don't like configuring the editor or who don't know how to configure the editor, I created this distro to make your user experience as easy as possible.
 
 [[./lem-dashboard.png]]
+
+* Table Of Contents
+  - [[#Language-modes][Language Modes]]
+  - [[#Config-Keymaps][Config Keymaps]]
+      - [[#Window][Window]]
+      - [[#Lisp-mode][Lisp mode]]
+      - [[#Editor][Editor]]
+      - [[#Help][Help]] 
+  - [[#Extensions][extensions]]
+  - [[#Themes][themes]]
+  - [[#See-aslo][See aslo]]
 
 * Language modes
 
@@ -48,6 +60,16 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
 - C-h c: apropos command
 
 These are the current keybinds of the distro
+
+* Extensions
+
+- [[https://github.com/ecraven/r7rs-swank][r7rs-swank]]
+
+* Themes
+
+- Gruvbox Material
+- Svelte High Contrast
+- Svelte
 
 * See aslo
 
