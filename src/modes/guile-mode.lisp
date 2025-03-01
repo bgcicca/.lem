@@ -2,7 +2,6 @@
   (:use :cl :lem))
 (in-package :config/guile-mode)
 
-;; Guile mode 
 (defvar *swank-port* 4015)
 
 #+(or sbcl ccl)
