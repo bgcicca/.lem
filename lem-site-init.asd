@@ -1,5 +1,5 @@
 (asdf/parse-defsystem:defsystem "lem-site-init"
-  :depends-on ()
+  :depends-on ("lem-pareto")
   :components ((:module "src"
                 :components ((:file "editor-config")
                              (:file "themes")

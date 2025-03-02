@@ -18,6 +18,18 @@ The text editor lem is the lisp hacker editor, super complete, extensible and ea
   - [[#Themes][themes]]
   - [[#See-aslo][See aslo]]
 
+* Install
+
+#+BEGIN_SRC shell
+# If you have another config, make a backup of it.
+mv .lem .lem.bak
+
+# and clone the repo
+git clone https://github.com/bgcicca/oh-my-lem ~/.lem
+#+END_SRC
+
+After that, just start your lem normally
+
 * Language modes
 
 - Lisp mode
@@ -65,12 +77,21 @@ These are the current keybinds of the distro
 * Extensions
 
 - [[https://github.com/ecraven/r7rs-swank][r7rs-swank]]
+- [[https://github.com/40ants/lem-pareto][lem-pareto]]
 
 * Themes
 
 - Gruvbox Material
+
+[[gruvbox-material-theme.png]]
+
 - Svelte High Contrast
+
+[[svelte-high-contrast.png]]
+
 - Svelte
+
+[[svelte-theme.png]]
 
 * See aslo
 

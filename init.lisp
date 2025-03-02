@@ -24,7 +24,8 @@
 ;; Load my init files.
 (let ((asdf:*central-registry*
         (append (list (asdf:system-source-directory :lem)
-                      #P"~/.lem/" 
+                      #P"~/.lem/"
+                      #P"~/.lem/lisp/lem-pareto/"
                       #P"~/quicklisp/local-projects/"
                       #P"~/common-lisp/")
                 asdf:*central-registry*)))
