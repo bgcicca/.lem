@@ -21,7 +21,6 @@
 
 (asdf:clear-source-registry)
 
-;; Load my init files.
 (let ((asdf:*central-registry*
         (append (list (asdf:system-source-directory :lem)
                       #P"~/.lem/"

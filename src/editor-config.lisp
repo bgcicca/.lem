@@ -7,5 +7,5 @@
 (lem:enable-clipboard-p)
 
 
-(setf lem:*auto-format* t)
+;; (setf lem:*auto-format* t)
 

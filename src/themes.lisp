@@ -71,4 +71,8 @@
   (syntax-type-attribute :foreground "#7daea3")
   (syntax-builtin-attribute :bold t :foreground "#a9b665"))
 
+; (push "~/.lem/lisp/lem-retro/" asdf:*central-registry*)
+; (asdf:load-system :lem-retro)
+; (retro-light)
+
 (load-theme "gruvbox-material") 
